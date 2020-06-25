@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/add_text"
+           android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:text="ToDo List" />
+        <TextView
+            android:id="@+id/add_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+            android:text="Add" />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="search To Do List"
+        android:background="@drawable/edit_text_shape"
+        android:layout_margin="10dp"
+        android:inputType="textAutoComplete"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
